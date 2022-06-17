@@ -11,7 +11,6 @@ function ExpenseItem(props) {
                     <div>{month}</div>
                     <div>{day}</div>
                     <div>{year}</div>
-                    
                 </div>
             <div className="expense-item__description">
             <div className='expense-item__description'>
