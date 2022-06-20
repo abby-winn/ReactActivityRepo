@@ -4,7 +4,9 @@ import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 
 function ExpenseItem(props){
-  
+  function clickHandler(){
+    console.log("Clicked!!!");
+  }
     return(
         <Card className = 'expense-item'>
         <ExpenseDate date={props.date}></ExpenseDate>
@@ -13,6 +15,7 @@ function ExpenseItem(props){
             <h2>{props.title}</h2>
             <div className = 'expense-item__price'>${props.amount}</div>
         </div>
+        <button onClick = {clickHandler}>Change Title</button>
     </Card>
 
    );
