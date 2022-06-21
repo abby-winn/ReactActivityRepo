@@ -5,10 +5,10 @@ import ExpenseForm from "./ExpenseForm.js";
 function NewExpense(props) {
   const [editing, setEditing] = useState(false);
 
-  function startEditingHandler() {
+  function startHandler() {
     setEditing(true);
   }
-  function stopEditingHandler() {
+  function stopHandler() {
     setEditing(false);
   }
 
@@ -23,8 +23,8 @@ function NewExpense(props) {
 
   return (
     <div className="new-expense">
-        {editing===false && <button onClick={startEditingHandler}>Start</button>}
-        {editing===true && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancel={stopEditingHandler}></ExpenseForm>}
+        {editing===false && <button onClick={startHandler}>Start</button>}
+        {editing===true && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onCancel={stopHandler}></ExpenseForm>}
     </div>
   );
 }
